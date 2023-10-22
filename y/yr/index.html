@@ -536,7 +536,11 @@
           <div class="row">
             <p>Ремонт космической станции</p>
             <div class="col">
-              <select name="product-choice" onclick="change()">
+              <select
+                name="product-choice"
+                onchange="getSum()"
+                onclick="change()"
+              >
                 <option value="1">заправка космического аппарата</option>
                 <option value="2">спутниковая услуга</option>
                 <option value="3">техническое обслуживание</option>
@@ -556,9 +560,9 @@
               </p>
             </div>
             <div class="col">
-              <input type="button" value="рассчитать" onclick="getSum()" />
+              <input type="button" value="Рассчитать" onclick="getSum()" />
               <div id="result"></div>
-              <div id="prodSum">Выберите тип товара</div>
+
               <!-- <script src="mn.js"></script> -->
               <script src="mn.js"></script>
             </div>

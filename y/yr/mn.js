@@ -8,20 +8,20 @@ function change() {
         let checkBox = document.getElementById("option-choices");
         checkBox.innerHTML = '\
         <input type="radio" id="onecomp" name="someGroupName" required="">\n \
-        <label for="onecomp">однокомпонентное</label>\n \
+        <label for="onecomp">настройка</label>\n \
         <input type="radio" id="twocomp" name="someGroupName">\n \
-        <label for="twocomp">двухкомпонентное</label> \
+        <label for="twocomp">ремонт антены</label> \
         ';
     }
     else if (selectChoice == 3) {
         let checkBox = document.getElementById("option-choices");
         checkBox.innerHTML = '\
         <input type="checkbox" id="acryl">\n \
-        <label for="acryl">акрил</label>\n \
+        <label for="acryl">заправка</label>\n \
         <input type="checkbox" id="base">\n \
-        <label for="base">базовая</label>\n \
+        <label for="base">мониторинг</label>\n \
         <input type="checkbox" id="powder">\n \
-        <label for="powder">порошковая</label> \
+        <label for="powder">полный ремонт</label> \
         ';
     }
 }
@@ -41,7 +41,11 @@ function getSum() {
     result.innerHTML = resultSum;
     let prodPrice = document.getElementById("prodPrice");
     prodPrice.innerHTML = price + " рублей";
-    updatePrice();
+   
+
+    function newFunction() {
+        updatePrice();
+    }
 }
 
 function checkOptions(choice) {
